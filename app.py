@@ -51,7 +51,7 @@ df=df.set_index('period')
 @app.route("/")
 def index(): 
 	
-	card_data = f'{data["volume"].mean().round(2)}' #be careful with the " and ' 
+	card_data = f'{df["volume"].mean().round(2)}' #be careful with the " and ' 
 
 	# generate plot
 	ax = df.plot(figsize = (20,9)) 
